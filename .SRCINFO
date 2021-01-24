@@ -1,0 +1,25 @@
+pkgbase = nexoid-fat-cpp-git
+	pkgdesc = NEXO Financial Application for Terminals (FAT) implemented in C++
+	pkgver = 0.1.1.r16.g050e00b
+	pkgrel = 1
+	url = http://nexoid.invalid
+	arch = i686
+	arch = x86_64
+	license = AGPL
+	makedepends = git
+	makedepends = sed
+	makedepends = make
+	makedepends = gcc
+	makedepends = asn1c
+	makedepends = lsof
+	makedepends = drakon-editor
+	depends = nngpp-git
+	depends = libsocket
+	provides = nexoid-fat
+	source = git+ssh://git@github.com:/hurufu/nexoid-fat-cpp.git
+	source = git+ssh://git@github.com:/hurufu/nexoid-ed.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = nexoid-fat-cpp-git
+

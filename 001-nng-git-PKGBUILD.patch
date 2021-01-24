@@ -1,0 +1,13 @@
+diff --git a/PKGBUILD b/PKGBUILD
+index faa3088..be79b91 100644
+--- a/PKGBUILD
++++ b/PKGBUILD
+@@ -59,7 +59,7 @@ package() {
+     install -d "$pkgdir/usr/include" "$pkgdir/usr/lib"
+     cp -a include/* "$pkgdir/usr/include"
+     cp -a build/libnng* "$pkgdir/usr/lib"
+-    install -Dm755 build/tools/nngcat/nngcat "$pkgdir/usr/bin/nngcat"
++    install -Dm755 build/src/tools/nngcat/nngcat "$pkgdir/usr/bin/nngcat"
+     install -Dm644 LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE.txt"
+     for i in docs/man/*.adoc ; do
+         generate_man $i
