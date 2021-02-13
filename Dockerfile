@@ -39,9 +39,9 @@ RUN git clone https://aur.archlinux.org/nng-git.git "$DOCKER_HOME/nng-git"
 COPY --chown="$DOCKER_USER:root" 001-nng-git-PKGBUILD.patch "$DOCKER_HOME/nng-git/"
 WORKDIR $DOCKER_HOME/nng-git
 RUN patch < 001-nng-git-PKGBUILD.patch && \
-    makepkg --syncdeps --rmdeps --install --clean --asdeps --noconfirm
+    makepkg --syncdeps --rmdeps --install --clean --asdeps --noconfirm --nocheck
 
-RUN pacaur --aur-sync --asdeps --noedit --noconfirm nngpp-git
+RUN pacaur --aur-sync --asdeps --noedit --noconfirm nngpp-git --nocheck
 
 # SSH Credentials
 RUN sudo pacman -S --noconfirm openssh
