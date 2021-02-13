@@ -6,11 +6,14 @@ ARG DOCKER_HOME=/home/$DOCKER_USER
 ARG DOCKER_WORKDIR=$DOCKER_HOME/nexoid-fat-cpp-git
 
 # Preparation
-RUN pacman -Syu --noconfirm
-RUN pacman -S --asdeps --noconfirm --needed base-devel git cmake pkg-config
+RUN pacman -Syu --asdeps --noconfirm --needed base-devel git cmake pkg-config
 
 RUN useradd --base-dir /home -m --shell /bin/bash -g root --comment "Build Bot,,,," "$DOCKER_USER"
 RUN echo '%root ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/root
+
+# Configure makepkg
+COPY makepkg.patch ./
+RUN patch /etc/makepkg.conf makepkg.patch
 
 USER "$DOCKER_USER"
 
