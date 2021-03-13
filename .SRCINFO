@@ -1,6 +1,6 @@
 pkgbase = nexoid-fat-cpp-git
 	pkgdesc = NEXO Financial Application for Terminals (FAT) implemented in C++
-	pkgver = 0.1.1.r16.g050e00b
+	pkgver = 0.2.0
 	pkgrel = 1
 	url = http://nexoid.invalid
 	arch = i686
@@ -18,6 +18,8 @@ pkgbase = nexoid-fat-cpp-git
 	provides = nexoid-fat
 	source = git+ssh://git@github.com:/hurufu/nexoid-fat-cpp.git
 	source = git+ssh://git@github.com:/hurufu/nexoid-ed.git
+	source = git+ssh://git@github.com:/hurufu/nexoid-protocol-collection.git
+	sha256sums = SKIP
 	sha256sums = SKIP
 	sha256sums = SKIP
 
